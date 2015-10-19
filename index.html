@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<script type="text/javascript">
+function myFunc(){
+var lines = $('#mytextarea').val().split(/\n/);
+var texts = []
+for (var i = 0; i < lines.length; i++) {
+    texts.push($.trim(lines[i]));
+}
+texts.splice(11, 1);
+texts.splice(12, 1);
+texts.splice(13, 1);
+texts.splice(14, 1);
+texts.splice(15, 1);
+texts.splice(18, 1);
+texts.splice(19, 1);
+texts.splice(20, 1);
+texts.splice(21, 1);
+texts.splice(22, 1);
+texts.splice(23, 6);
+
+
+for (var i = 0; i < texts.length; i++) {
+    if (i == 9) {
+        b = i + 1;
+        document.getElementById("out").value += texts[i] + " " + texts[b] + " " + texts[b + 1] + " " + texts[b + 2] + " " + texts[b + 3] + " " + texts[b + 4] + " " + texts[b + 5] + "\n";
+        i = 16;
+    }
+    if (i == 16) {
+        b = i + 1;
+        document.getElementById("out").value += texts[i] + " " + texts[b] + " " + texts[b + 1] + " " + texts[b + 2] + " " + texts[b + 3] + " " + texts[b + 4] + " " + texts[b + 5] + "\n";
+        i = 22;
+    } else {
+        document.getElementById("out").value += texts[i] + "\n";
+    }
+
+}
+    
+}
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
